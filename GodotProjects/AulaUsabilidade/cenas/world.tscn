@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bq8l2tmifx1nn"]
+
+[ext_resource type="Texture2D" uid="uid://cxybvgl06sn8a" path="res://sprites/Seasonal Tilesets/Seasonal Tilesets/3 - Tropics/Background parts/_Complete_static_BG_(288 x 208).png" id="1_yvkbt"]
+
+[node name="world" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(606, 328)
+scale = Vector2(5.04218, 4.12174)
+texture = ExtResource("1_yvkbt")

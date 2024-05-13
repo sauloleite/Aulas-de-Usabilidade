@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=3 uid="uid://dxw7h3xfcpc63"]
+
+[ext_resource type="Texture2D" uid="uid://dixysoobbuftd" path="res://sprites/Seasonal Tilesets/Seasonal Tilesets/1 - Grassland/Background parts/_Complete_static_BG_(288 x 208).png" id="1_iq3k5"]
+[ext_resource type="Script" path="res://scripts/menu.gd" id="1_tid5a"]
+
+[node name="menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_right = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tid5a")
+
+[node name="Background" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(595, 311)
+scale = Vector2(6.31019, 5.27988)
+texture = ExtResource("1_iq3k5")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 533.0
+offset_top = 284.0
+offset_right = 641.0
+offset_bottom = 350.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Start" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Iniciar o jogo"
+
+[node name="Exit" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Sair do jogo"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Exit" to="." method="_on_exit_pressed"]
